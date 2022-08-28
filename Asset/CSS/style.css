@@ -1,0 +1,112 @@
+body{
+    background-color:#4f5d7e;
+    margin: 0;
+    height: fit-content;
+}
+
+.pagecontainer {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* the quiz box css */
+#quizbox{
+    width: 500px;
+    height: 400px;
+    background-color: #23272a;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+
+}
+/* The buttons css  */
+.button{
+    color:#ffffff;
+    background-color:#49ddc1;
+    border: 1px solid transparent ;  
+    display: inline-block;
+    margin: 4px 2px;
+    size: 40px;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+/* startButton css */
+#startbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 60%;
+    height: 26%;
+    position: absolute;
+    bottom: 25%;
+    left: 19%;
+}
+/* Header box  */
+.Headerbox{
+background-color:#49ddc1;
+    height: 60px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    display: flex;
+
+}
+/* Text inside the header */
+#HeaderboxText{
+    margin: 0 0 0 0;
+    color: #ffffff;
+    font-family: sans-serif ;
+    font-size: 1rem;
+}
+
+#queastions{
+    margin: 0 0 0 0;
+    color: #ffffff;
+    font-family: sans-serif ;
+    font-size: 1rem;
+}
+
+/* Countdown Timer */
+#Coundowntimer{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 45px;
+    color:#ffffff
+}
+.Timeleft{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+#choicesContainer{
+    display: none;
+    flex-direction: column;
+    align-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 50px;
+    
+}
+
+.choiceBtn{
+    width: 100px;
+    margin-left: 15px;
+}
+

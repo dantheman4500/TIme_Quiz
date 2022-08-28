@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timed Quiz </title>
+  <link rel="stylesheet" href="./Asset/CSS/style.css">
+</head>
+
+<body>
+
+  <div class="pagecontainer">
+
+    <!-- High Score board  -->
+    <button id="HighScore" class="button"> High Score</button>
+    <!-- Countdown Timer -->
+    <div id="Coundowntimer">Time Remaing:
+      <div class="Timeleft">5:00</div>
+    </div>
+    <!-- Quizbox  -->
+    <div id="quizbox">
+      <!-- Headerbox -->
+      <div class="Headerbox ">
+        <!-- Header Box Content -->
+        <h1 id="HeaderboxText" id="queastions">WebAPI Quiz</h1>
+      </div>
+      <!-- Start button  -->
+      <div>
+        <button id="startbutton" class="button">Start Test</button>
+        <!-- queastions -->
+          <div id="choicesContainer" >
+            <button id="choice1" class="choiceBtn"></button>
+            <button id="choice2"  class="choiceBtn"></button>
+            <button id="choice3"  class="choiceBtn"></button>
+            <button id="choice4"  class="choiceBtn"></button>
+          </div>
+      </div>
+    </div>
+
+    <script src="./Asset/Javascript/script.js"></script>
+</body>
+
+</html>
