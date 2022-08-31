@@ -5,6 +5,9 @@ var boxText = document.getElementById("HeaderboxText");
 var queastionEl = document.getElementById("queastions")
 var choicesEl = document.getElementById("choicesContainer");
 var hideEL = document.querySelector(".hide");
+var quizboxEl = document.getElementById("quizbox");
+
+
 
 var choices1 = document.getElementById("choice1");
 var choices2 = document.getElementById("choice2");
@@ -19,6 +22,8 @@ choices4.addEventListener("click", choiceClick);
 var currentQuestion = 0;
 var incrementingVariable = 0;
 var answerCorrect = 0;
+var testTaker = "";
+
 
 // queastion bank container all the queastions the choices and the correct answer in that queastion. 
 
@@ -105,14 +110,31 @@ function endQuiz(){
     endScreen();
 };
 
+
+// ------Prompts user with how many correct answer they got and to put their information ----------//
 function  endScreen(){
     boxText.textContent = "Please put Enter your Intials"
     choicesEl.style.display="none";
+    
     var input = document.createElement("input");
-    input.type = "text";
-    input.className = "css-class-name"; // set the CSS class
-    container.appendChild(input); // put it into the DOM
+    input.type = "text";  
+    input.className = "inputbox"; 
+    input.placeholder="Please put your intials"
+    quizboxEl.appendChild(input);
+
+    var scoreBox = document.createElement("div");
+    scoreBox.className = "scoreBox";
+    quizboxEl.appendChild(scoreBox);
+    scoreBox.innerHTML = "Your Scoreboard" +  "<br>" + answerCorrect
+
+    var hsBTN = document.createElement("input");
+    input.type = "button";  
+    hsBTN.className = "hsBTN";
+    quizboxEl.appendChild(hsBTN);
+    
+
 };
+
 
 var secondLeft = 300;
 // start the timer once the button is clicked
