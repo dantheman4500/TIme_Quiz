@@ -66,6 +66,7 @@ background-color:#49ddc1;
     align-items: center;
     flex-wrap:wrap;
     display: flex;
+    width: 100%;
 
 }
 /* Text inside the header */
@@ -100,37 +101,36 @@ background-color:#49ddc1;
 
 
 #choicesContainer{
-    display: none;
     flex-direction: column;
     align-content: space-evenly;
     align-items: flex-start;
     margin-top: 40px;
     gap: 50px;
-    
+    margin-bottom: 50px;    
 }
 
 .choiceBtn{
     width: 100px;
-    margin-left: 15px;
+    float: left;
 }
 
 .inputbox{
     margin-top: 140px;
     margin-left: 30px;
+    display:inline-block;
+    width: 100px;
+    height: 100px;
 }
 
 .scoreBox{
     width: 150px;
     height: 150px;
-    display: inline-block;
-    margin-left: 80px;
-    margin-top: 30px;
+    display: flex;
     text-align: center;
 }
 
 .hsBTN{
-    bottom: 10px;
-    margin: 0 0 0 0;
+ margin-bottom: 25px;
     width: 75px;
-    height: auto;
+    height: 25px;
 }

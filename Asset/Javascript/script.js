@@ -117,7 +117,7 @@ function  endScreen(){
     choicesEl.style.display="none";
     
     var input = document.createElement("input");
-    input.type = "text";  
+    input.setAttribute('type', 'text');
     input.className = "inputbox"; 
     input.placeholder="Please put your intials"
     quizboxEl.appendChild(input);
