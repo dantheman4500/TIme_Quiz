@@ -6,9 +6,7 @@ var queastionEl = document.getElementById("queastions")
 var choicesEl = document.getElementById("choicesContainer");
 var hideEL = document.querySelector(".hide");
 var quizboxEl = document.getElementById("quizbox");
-
-
-
+ 
 var choices1 = document.getElementById("choice1");
 var choices2 = document.getElementById("choice2");
 var choices3 = document.getElementById("choice3");
@@ -22,7 +20,6 @@ choices4.addEventListener("click", choiceClick);
 var currentQuestion = 0;
 var incrementingVariable = 0;
 var answerCorrect = 0;
-var testTaker = "";
 
 
 // queastion bank container all the queastions the choices and the correct answer in that queastion. 
@@ -110,30 +107,66 @@ function endQuiz(){
     endScreen();
 };
 
-
 // ------Prompts user with how many correct answer they got and to put their information ----------//
 function  endScreen(){
-    boxText.textContent = "Please put Enter your Intials"
+    boxText.textContent = "Please Enter your Intials"
     choicesEl.style.display="none";
-    
-    var input = document.createElement("input");
-    input.setAttribute('type', 'text');
-    input.className = "inputbox"; 
-    input.placeholder="Please put your intials"
-    quizboxEl.appendChild(input);
 
+    // CREAT user score
     var scoreBox = document.createElement("div");
     scoreBox.className = "scoreBox";
-    quizboxEl.appendChild(scoreBox);
     scoreBox.innerHTML = "Your Scoreboard" +  "<br>" + answerCorrect
-
-    var hsBTN = document.createElement("input");
-    input.type = "button";  
-    hsBTN.className = "hsBTN";
-    quizboxEl.appendChild(hsBTN);
+    quizboxEl.append(scoreBox);
     
+    // Create a form dynamically
+    var userInput = document.createElement("div");
+
+    var inputBox = document.createElement("input");
+    inputBox.setAttribute("type", "text");
+    inputBox.setAttribute("id", "intialsEl");
+    inputBox.setAttribute("maxlength", "2");  
+    inputBox.setAttribute("placeholder", "Intiials");
+
+    // create a submit button
+     var submitBtn = document.createElement("button");
+     submitBtn.setAttribute("type", "submit");
+     submitBtn.setAttribute("id", "submit");
+     submitBtn.textContent = "Submit"
+     // Append the full name input to the form
+     userInput.appendChild(inputBox);
+
+    // Append the submit button to the form
+    userInput.appendChild(submitBtn);
+
+    // Append everything to the quiz box//
+    quizboxEl.appendChild(userInput);
+
+let userInt;
+// -------------Get user score and store it into a gobal value----//   
+submitBtn.onclick = function(){
+    // making sure local storage isn't empty//
+    userInt = document.getElementById("intialsEl").value;
+
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+    newScore = {
+        User: userInt,
+        userScore: answerCorrect,
+    };
+
+    highscores.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    location.href = "Highscore.html"
+} ;
+
+
+console.log(localStorage);
+
 
 };
+
+
+
 
 
 var secondLeft = 300;

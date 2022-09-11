@@ -111,26 +111,58 @@ background-color:#49ddc1;
 
 .choiceBtn{
     width: 100px;
-    float: left;
 }
 
-.inputbox{
-    margin-top: 140px;
-    margin-left: 30px;
-    display:inline-block;
-    width: 100px;
-    height: 100px;
+
+
+.hide{
+    display:none;
 }
+
+/* append elements */
 
 .scoreBox{
     width: 150px;
     height: 150px;
-    display: flex;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px ;
+}
+
+#submit{
+ width: auto;
+ height: 25px;
+}
+
+/* --------------------------- */
+
+/* ----------Score Baord Css ------------ */
+
+.boards{
+    margin: auto;
+    width: 50%;
+    height: fit-content;
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px;
+    list-style-position: inside
+}
+
+#highscores{
     text-align: center;
 }
 
-.hsBTN{
- margin-bottom: 25px;
-    width: 75px;
-    height: 25px;
+ol li{
+    border: 3px solid black;
+    height: auto;
+}
+
+li { background:#7289da; }
+li:nth-child(odd) { background: #ffffff; }
+
+.highscoreBtn{
+    background-color:#49ddc1;
+    border: 1px solid transparent ; 
+    cursor: pointer;
+    border-radius: 4px;
 }
